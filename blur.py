@@ -8,4 +8,4 @@ def gaussian_kernel_1d(sigma):
 
 def blur(image,sigma):
     imageBlur = convolution.applyFilter(image,gaussian_kernel_1d(3.0))   
-    return applyFilter(imageBlur,gaussian_kernel_1d(3.0).transpose()) 
+    return convolution.applyFilter(imageBlur,gaussian_kernel_1d(3.0).transpose()) 
