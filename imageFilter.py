@@ -25,4 +25,4 @@ if img is not None:
     elif args.invert_colors:
         invertImage = basicFilters.invertColors(img)
         imageIO.writeImage(invertImage,args.output_file)
-    print "finish in " + str(round(time.time()-startTime,4)) + "s"
+    print ("finish in " + str(round(time.time()-startTime,4)) + "s")

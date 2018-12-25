@@ -5,8 +5,11 @@ def readImage(filename):
         first = misc.imread(filename)
         first.tofile('.temp.raw')
         imageMemmap = np.memmap('.temp.raw', dtype=np.uint8, shape=first.shape)
-        os.remove(".temp.raw")
-        return imageMemmap
+        try:
+            os.remove(".temp.raw")
+        finally:
+            return imageMemmap
+        
     else:
         print("The file does not exist")
         return None
