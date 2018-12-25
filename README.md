@@ -53,7 +53,7 @@ The avaiable colors are  `[red,green,blue,brown]`
 `python imageFilter.py --grayscale images/input.jpeg images/output.jpeg`
 
 Output File | 
---
+-- |
 ![grayscale img](https://i.imgur.com/DxwKCz0.jpg)|
 
 
