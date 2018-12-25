@@ -1,4 +1,4 @@
-# imageFilters
+# Image Filters
 ## Python 
 To run this code you need python 2.7 or newer. I've test this in Mac OS X and Windows 10, also it should work well in Linux.
 
@@ -48,7 +48,13 @@ The avaiable colors are  `[red,green,blue,brown]`
 | --- | ----- | ---- | ----- |
 | ![red img](https://i.imgur.com/HNBHKp9.jpg) | ![green img](https://i.imgur.com/acO15Dv.jpg) | ![blue img](https://i.imgur.com/jS4HmIe.jpg) | ![brown img](https://i.imgur.com/dKslZfo.jpg) |
 
+### Grayscale Filter
 
+`python imageFilter.py --grayscale images/input.jpeg images/output.jpeg`
+
+Output File | 
+-- |
+![grayscale img](https://i.imgur.com/DxwKCz0.jpg)|
 
 
 

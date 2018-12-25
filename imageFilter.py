@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--blur', action='store_true')
 parser.add_argument('--sigma', nargs='?', type=float, default=3.0)
 parser.add_argument('--invert_colors', action='store_true')
+parser.add_argument('--grayscale', action='store_true')
 parser.add_argument('--edge', action='store_true')
 parser.add_argument('--color_filter', action='store_true')
 parser.add_argument('--color', help='red,green,blue,brown', type=str, default="red")
@@ -27,6 +28,9 @@ if img is not None:
     elif args.invert_colors:
         invertImage = basicFilters.invertColors(img)
         imageIO.writeImage(invertImage,args.output_file)
+    elif args.grayscale:
+        grayscaleImage = basicFilters.grayscaleFilter(img)
+        imageIO.writeImage(grayscaleImage,args.output_file)
     elif args.color_filter:
         color = None
         if args.color == "red":
