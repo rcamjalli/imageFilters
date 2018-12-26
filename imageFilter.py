@@ -44,4 +44,4 @@ if img is not None:
         if color is not None:
             colorImage = basicFilters.colorFiler(img,color)
             imageIO.writeImage(colorImage,args.output_file)
-    print "finish in " + str(round(time.time()-startTime,4)) + "s"
+    print ("finish in " + str(round(time.time()-startTime,4)) + "s")

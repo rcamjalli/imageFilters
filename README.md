@@ -28,7 +28,7 @@ Output File |
 
 Output File | 
 ------------ |
-![edge img](https://i.imgur.com/VHJtube.jpg) | 
+![edge img](https://i.imgur.com/il4xbhr.jpg) | 
 
 ### Invert Colors
 

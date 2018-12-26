@@ -16,11 +16,13 @@ def applyFilter(image, kernel):
             y_max = min(image_height - 1, y + kernel_halfh)
             for c in range(channel_count):
                 value = 0
-                total = 0
                 for u in range(x_min, x_max + 1):
                     for v in range(y_min, y_max + 1):
                         tmp = kernel[v - y + kernel_halfh, u - x + kernel_halfw]
                         value += image[v, u, c] * tmp  
-                        total += tmp
-                output[y, x, c] = value / total
+                if value < 0:
+                    value = 0
+                elif value > 255:
+                    value = 255
+                output[y, x, c] = value
     return output
