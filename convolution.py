@@ -20,7 +20,9 @@ def applyFilter(image, kernel):
                     for v in range(y_min, y_max + 1):
                         tmp = kernel[v - y + kernel_halfh, u - x + kernel_halfw]
                         value += image[v, u, c] * tmp  
-                value = value if value >= 0 else 0
-                value = value if value <= 255 else 255 
+                if value < 0:
+                    value = 0
+                elif value > 255:
+                    value = 255
                 output[y, x, c] = value
     return output
