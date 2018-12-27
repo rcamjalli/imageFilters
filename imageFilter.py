@@ -1,7 +1,7 @@
 import time, argparse, imageIO
 from blur import blur
 from edgeDetector import edgeDetection
-import basicFilters, log
+import basicFilters, log, colors
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--blur', action='store_true')
@@ -33,16 +33,10 @@ if img is not None:
         grayscaleImage = basicFilters.grayscaleFilter(img)
         imageIO.writeImage(grayscaleImage,args.output_file)
     elif args.color_filter:
-        color = None
-        if args.color == "red":
-            color = [191,90,47]
-        elif args.color == "green":
-            color = [47,191,90]
-        elif args.color == "blue":
-            color = [47,90,191]
-        elif args.color == "brown":
-            color = [104,54,33]
+        color = colors.getColor(args.color)
         if color is not None:
             colorImage = basicFilters.colorFiler(img,color)
             imageIO.writeImage(colorImage,args.output_file)
+        else:
+            log.error(args.color + " is not supported")
     log.status("finish in " + str(round(time.time()-startTime,4)) + "s")
