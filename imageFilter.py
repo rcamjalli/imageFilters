@@ -1,6 +1,7 @@
 import time, argparse, imageIO
 from blur import blur
 from edgeDetector import edgeDetection
+from emboss import embossFilter
 import basicFilters, log, colors
 
 parser = argparse.ArgumentParser()
@@ -9,6 +10,7 @@ parser.add_argument('--sigma', nargs='?', type=float, default=3.0)
 parser.add_argument('--invert_colors', action='store_true')
 parser.add_argument('--grayscale', action='store_true')
 parser.add_argument('--edge', action='store_true')
+parser.add_argument('--emboss', action='store_true')
 parser.add_argument('--color_filter', action='store_true')
 parser.add_argument('--color', help='red,green,blue,brown', type=str, default="red")
 parser.add_argument("input_file", help="The input image file.")
@@ -32,6 +34,9 @@ if img is not None:
     elif args.grayscale:
         grayscaleImage = basicFilters.grayscaleFilter(img)
         imageIO.writeImage(grayscaleImage,args.output_file)
+    elif args.emboss:
+        embossImage = embossFilter(img)
+        imageIO.writeImage(embossImage,args.output_file)
     elif args.color_filter:
         color = colors.getColor(args.color)
         if color is not None:
