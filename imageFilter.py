@@ -19,6 +19,7 @@ img = imageIO.readImage(args.input_file)
 
 if img is not None:
     startTime = time.time()
+    print ("Log: proccessing image")
     if args.blur:
         blurImage = blur(img,args.sigma)
         imageIO.writeImage(blurImage,args.output_file)
@@ -44,4 +45,4 @@ if img is not None:
         if color is not None:
             colorImage = basicFilters.colorFiler(img,color)
             imageIO.writeImage(colorImage,args.output_file)
-    print ("finish in " + str(round(time.time()-startTime,4)) + "s")
+    print ("Log: finish in " + str(round(time.time()-startTime,4)) + "s")
