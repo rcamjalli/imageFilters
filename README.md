@@ -45,19 +45,19 @@ Output File |
 The avaiable colors are  `[red,green,blue,brown]`
 <table>
     <tr> 
-        <td colspan=2><center><h3>Colors</td>
+        <td colspan=2 aling="center"><b>Colors</center></td>
     </tr>
     <tr> 
-        <td><center><b>Red</td>
-        <td><center><b>Green</td>
+        <td><b>Red</td>
+        <td><b>Green</td>
     </tr>
     <tr> 
         <td><img src="https://i.imgur.com/HNBHKp9.jpg"></td>
         <td><img src="https://i.imgur.com/acO15Dv.jpg"></td>
     </tr>
     <tr> 
-        <td><center><b>Blue</td>
-        <td><center><b>Brown</td>
+        <td><b>Blue</td>
+        <td><b>Brown</td>
     </tr>
     <tr> 
         <td><img src="https://i.imgur.com/jS4HmIe.jpg"></td>
