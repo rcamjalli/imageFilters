@@ -1,7 +1,7 @@
 import np, convolution
 
 def kernelAsList():
-    return [[1,1,1,1,-8.0001,1,1,1,1]]
+    return [[1,2,3,-12,3,2,1]]
 
 def midKernel():
     kernel = kernelAsList()
