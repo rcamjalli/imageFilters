@@ -43,10 +43,27 @@ Output File |
 `python imageFilter.py --color_filter --color red images/input.jpeg images/output.jpeg`
 
 The avaiable colors are  `[red,green,blue,brown]`
-
-| Red | Green | Blue | Brown | 
-| --- | ----- | ---- | ----- |
-| ![red img](https://i.imgur.com/HNBHKp9.jpg) | ![green img](https://i.imgur.com/acO15Dv.jpg) | ![blue img](https://i.imgur.com/jS4HmIe.jpg) | ![brown img](https://i.imgur.com/dKslZfo.jpg) |
+<table>
+    <tr> 
+        <td colspan=2 aling="center"><b>Colors</center></td>
+    </tr>
+    <tr> 
+        <td><b>Red</td>
+        <td><b>Green</td>
+    </tr>
+    <tr> 
+        <td><img src="https://i.imgur.com/HNBHKp9.jpg"></td>
+        <td><img src="https://i.imgur.com/acO15Dv.jpg"></td>
+    </tr>
+    <tr> 
+        <td><b>Blue</td>
+        <td><b>Brown</td>
+    </tr>
+    <tr> 
+        <td><img src="https://i.imgur.com/jS4HmIe.jpg"></td>
+        <td><img src="https://i.imgur.com/dKslZfo.jpg"></td>
+    </tr>
+</table>
 
 ### Grayscale Filter
 
@@ -55,6 +72,14 @@ The avaiable colors are  `[red,green,blue,brown]`
 Output File | 
 -- |
 ![grayscale img](https://i.imgur.com/DxwKCz0.jpg)|
+
+### Emboss Filter
+
+`python imageFilter.py --emboss images/input.jpeg images/output.jpeg`
+
+Output File | 
+-- |
+![emboss img](https://i.imgur.com/wJ4tXky.jpg)|
 
 
 
