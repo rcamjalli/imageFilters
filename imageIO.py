@@ -1,10 +1,10 @@
-from scipy import misc
+import imageio
 import numpy as np
 import os, log
 def readImage(filename):
     if os.path.exists(filename):
         log.status("reading from " + filename)
-        first = misc.imread(filename)
+        first = imageio.imread(filename)
         first.tofile('.temp.raw')
         imageMemmap = np.memmap('.temp.raw', dtype=np.uint8, shape=first.shape)
         log.status("successfully read from" + filename)
@@ -19,5 +19,5 @@ def readImage(filename):
 
 def writeImage(imageMemmap,filename):
     log.status("writing image to "+filename)
-    misc.imsave(filename, imageMemmap)
+    imageio.imwrite(filename, imageMemmap)
     log.status("image successfully write to " + filename)
