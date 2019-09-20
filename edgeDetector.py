@@ -1,4 +1,5 @@
-import np, convolution
+import convolution
+import numpy as np
 
 def kernelAsList():
     return [[1,2,3,-12,3,2,1]]

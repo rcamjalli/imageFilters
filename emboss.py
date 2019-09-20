@@ -1,4 +1,5 @@
-import np, convolution
+import convolution
+import numpy as np
 
 def kernel2dAsList():
     return [[-2,-1,0],[-1,1,1],[0,1,2]]

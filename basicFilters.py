@@ -1,4 +1,4 @@
-import np
+import numpy as np
 def invertColors(image):
     output = np.zeros(image.shape, dtype=np.float32)
     channel_count = image.shape[2]

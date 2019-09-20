@@ -1,4 +1,5 @@
-import np, convolution
+import convolution
+import numpy as np
 def gaussian_kernel_1d(sigma):
     kernel_radius = np.ceil(sigma) * 3
     kernel_size = kernel_radius * 2 + 1

@@ -1,5 +1,6 @@
 from scipy import misc
-import os, np, log
+import numpy as np
+import os, log
 def readImage(filename):
     if os.path.exists(filename):
         log.status("reading from " + filename)

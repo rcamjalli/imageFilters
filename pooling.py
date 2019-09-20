@@ -1,4 +1,4 @@
-import np
+import numpy as np
 def pooling_greyscale(image):
     output = np.zeros((image.shape[0]//2,image.shape[1]//2,3), dtype=np.float32)
     x = 0
